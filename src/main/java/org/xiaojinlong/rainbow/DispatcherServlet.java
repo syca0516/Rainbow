@@ -23,7 +23,7 @@ public class DispatcherServlet extends HttpServlet {
         try {
             config = (Config)Class.forName(configClassName).newInstance();
         } catch (ClassNotFoundException | InstantiationException | IllegalAccessException e) {
-            System.err.println("’“≤ªµΩ≈‰÷√¿‡");
+            System.err.println("ÈÖçÁΩÆÁ±ª‰∏çÂ≠òÂú®");
             e.printStackTrace();
         }
 
@@ -42,7 +42,7 @@ public class DispatcherServlet extends HttpServlet {
                 }
 
                 assert controller != null;
-                controller.process(uri, req, resp);
+                controller.process(new URI(uri), req, resp);
             }
         }
 

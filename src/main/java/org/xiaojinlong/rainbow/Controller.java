@@ -9,6 +9,6 @@ import javax.servlet.http.HttpServletResponse;
  */
 public interface Controller {
 
-    void process(String obj, HttpServletRequest req, HttpServletResponse resp);
+    void process(URI uri, HttpServletRequest req, HttpServletResponse resp);
 
 }

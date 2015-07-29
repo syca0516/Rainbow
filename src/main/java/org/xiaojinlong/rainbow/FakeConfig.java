@@ -13,6 +13,7 @@ public class FakeConfig implements Config {
     public Map<Pattern, Class<? extends Controller>> configRoutes() {
         Map<Pattern, Class<? extends Controller>> routes = new HashMap<>();
         routes.put(Pattern.compile("/happy/\\d+"), FakeController.class);
+        routes.put(Pattern.compile("/\\d+/edit"), FakeController.class);
         return routes;
     }
 }
